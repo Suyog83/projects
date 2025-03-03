@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Billing System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Electricity Billing System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Customer Management</h2>
+            <form id="customer-form">
+                <label for="customer-id">Customer ID:</label>
+                <input type="text" id="customer-id" required>
+
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" required>
+
+                <label for="customer-address">Address:</label>
+                <textarea id="customer-address" required></textarea>
+
+                <label for="customer-phone">Phone Number:</label>
+                <input type="tel" id="customer-phone" required>
+
+                <button type="submit">Add Customer</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Billing Information</h2>
+            <form id="billing-form">
+                <label for="billing-customer-id">Customer ID:</label>
+                <input type="text" id="billing-customer-id" required>
+
+                <label for="units-consumed">Units Consumed:</label>
+                <input type="number" id="units-consumed" required>
+
+                <button type="submit">Calculate Bill</button>
+            </form>
+        </section>
+
+        <section id="bill-output" style="display:none;">
+            <h2>Your Bill</h2>
+            <div id="bill-amount"></div>
+        </section>
+
+        <section>
+            <h2>Recent Bills</h2>
+            <div id="recent-bills" class="recent-bills">
+                <!-- Recent bills will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
